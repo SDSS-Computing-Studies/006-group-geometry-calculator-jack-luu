@@ -84,36 +84,24 @@ def mainmenuB():
     print(menu5)
     return None
 
-def side():
-    #This will ask the user to enter a value
-    #Input parameter: float
-    #Outout parameter: float
-    #Author: Jack Luu
-    x = float(input("What is the length of one side of your cube: "))
-    return x
-
 def Aofcube(side):
-    area = 6*side**2
+    area = 6*(side*side)
     return area
 
 def Vofcube(side):
-    side = x
-    volume = side**3 
+    volume = side*side*side
     return volume
 
 def Aofface(side):
-    side = x
-    facearea = side**2
+    facearea = side*side
     return facearea
 
 def diagonal(side):
-    side =x
-    diaofface = (2*(side**2))**(1/2)
+    diaofface = (2*(side*side))**(1/2)
     return diaofface
 
 def soliddiagonal(side):
-    side =x
-    soliddia = (((2*(side**2))**(1/2)) + side**2)**(1/2)
+    soliddia = (((2*(side*side))**(1/2)) + side**2)**(1/2)
     return soliddia
 
 def mainstream():
@@ -124,23 +112,29 @@ def mainstream():
     maintitle()
     mainmenuA()
     mainmenuB()
-    option = input("Do you wish to continue? Enter \"yes\" to continue or \"no\" to exit: ")
+    
     quit = False
 
     while quit == False:
+        option = input("Do you wish to continue? Enter \"yes\" to continue or \"no\" to exit: ")
         if option == "yes":
-            side()
+            side = float(input("What is the length of the side: "))
             calc = int(input("Which calculation do you wish to commit: "))
             if calc == 1:
                 Aofcube(side)
+                print("The area of the cube is:", Aofcube(side))
             elif calc == 2:
                 Vofcube(side)
+                print("The volume of the cube is:", Vofcube(side))
             elif calc == 3:
                 Aofface(side)
+                print("The area of a face of the cube is:", Aofface(side))
             elif calc == 4:
                 diagonal(side)
+                print("The diagonal of a face of the cube is:", diagonal(side))
             elif calc == 5:
                 soliddiagonal(side)
+                print("The solid diagonal of the cube is:", soliddiagonal(side))
         elif option == "no":
             quit = True
         else:
