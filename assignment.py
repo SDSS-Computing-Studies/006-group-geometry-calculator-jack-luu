@@ -26,7 +26,7 @@ def getParams(shape):
     # input parameter: string 
     # output parameter: return a list containing the prompts for each shape:
     # example: ["Enter the radius:","Enter the slant height:","Enter the height:"]
-    prompts
+    prompts 
 
     return prompts
 
@@ -36,7 +36,7 @@ def getInputs(questions):
     # It will turn all the input data into a list
     # input parameter: list containing the prompts/questions
     # output parameter: return a list containing all the measurements of the shape
-    measurements
+    measurements 
     
     return measurements
 
@@ -47,3 +47,15 @@ def main():
     title()
 
 main()
+
+def Instructions():
+    Instructions = ("This program will allow you to calculate the area of a shape")
+    return None
+
+def shape(square):
+    side = float(input("Please enter the length of the side: "))
+    return side
+
+def area(square):
+    return side*side 
+    
